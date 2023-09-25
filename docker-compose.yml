@@ -6,10 +6,6 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /sys/fs/cgroup/systemd:/sys/fs/cgroup/systemd:rw
-    tmpfs:
-      - /run
     restart: unless-stopped
     # network_mode: "host"
     #devices:
