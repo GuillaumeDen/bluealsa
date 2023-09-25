@@ -5,9 +5,12 @@ services:
     image: localhost:5001/bluealsa
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /run/dbus:/run/dbus:ro
+      #- /run/dbus:/run/dbus:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /sys/fs/cgroup/systemd:/sys/fs/cgroup/systemd:rw
+    tmpfs:
+      - /run
     restart: unless-stopped
-    privileged: true
     # network_mode: "host"
     #devices:
     #  - /dev/ttyAMA0:/dev/ttyAMA0
