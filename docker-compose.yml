@@ -2,7 +2,7 @@ version: '3'
 services:
   bluetooth_player:
     container_name: bluetooth_player
-    image: bluealsa
+    image: bluealsa:latest
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
