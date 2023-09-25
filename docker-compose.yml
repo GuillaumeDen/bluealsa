@@ -8,6 +8,8 @@ services:
       - /run/dbus:/run/dbus:ro
     restart: unless-stopped
     privileged: true
-    network_mode: "host"
+    # network_mode: "host"
+    devices:
+      - /dev/ttyAMA0:/dev/ttyAMA0
     stdin_open: true
     tty: true
